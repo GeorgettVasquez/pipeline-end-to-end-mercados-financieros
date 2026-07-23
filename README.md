@@ -1,26 +1,52 @@
-# Dise-o-e-implementaci-n-de-un-pipeline-de-precios-de-acciones-y-datos-macroeconomicos
-El proyecto consiste en el diseño e implementación de un pipeline de datos End-to-End para
-la ingesta, almacenamiento, procesamiento y visualización de precios de acciones bursátiles
-combinados con indicadores económicos geoespaciales por región o país. El sistema
-permitirá analizar el comportamiento de los mercados financieros en correlación con
-métricas macroeconómicas georeferenciadas, habilitando consultas espaciales sobre la
-distribución global de indicadores como PIB, inflación, tasa de desempleo e índices
-bursátiles por país.
+# Pipeline End-to-End para Análisis de Mercados Financieros
 
-**Tecnologías utilizadas: Docker, Mage AI, FastApi, Streamlit**
-Apis utilizadas: Alpha vantage, yahoo finance y banco mundial
+## Descripción
 
-_1. docker para poder compartirlo sin que existan daños en las versiones con otras personas_
-_2. Mage Ai para los pipelines y conexión de la base de datos_
-_3. fastApi para extraer las consultas importantes de una manera más rapida y fácil_
-_4. Streamlit para la visualización de dashboard y las consultas_
+Este proyecto consiste en el diseño e implementación de un **pipeline de datos End-to-End** para la ingesta, almacenamiento, procesamiento y visualización de precios de acciones bursátiles, combinados con indicadores económicos geoespaciales por región o país.
 
+El sistema permite analizar el comportamiento de los mercados financieros en correlación con métricas macroeconómicas georreferenciadas, habilitando consultas espaciales sobre indicadores como el **PIB**, la **inflación**, la **tasa de desempleo** y los **índices bursátiles** de distintos países.
 
-Para ver la creación descargan el, archivo, lo corren con Docker compose up 
-y corren estas url
+## Tecnologías utilizadas
 
-Mage AI: http://localhost:6789
-FastAPI (docs): http://localhost:8000/docs
-Streamlit: http://localhost:8501
+- Docker
+- Mage AI
+- FastAPI
+- Streamlit
+- PostgreSQL + PostGIS
 
-Proyecto elaborado en conjunto con Tómas Jaramillo y Georgett Vásquez.
+## APIs utilizadas
+
+- Alpha Vantage
+- Yahoo Finance
+- World Bank API (Banco Mundial)
+
+## Función de cada tecnología
+
+- **Docker:** Permite ejecutar el proyecto en cualquier equipo manteniendo el mismo entorno y evitando problemas de compatibilidad entre versiones.
+- **Mage AI:** Implementa los pipelines de extracción, transformación y carga (ETL), además de la integración con la base de datos.
+- **FastAPI:** Expone una API REST para realizar consultas de manera rápida y eficiente.
+- **Streamlit:** Proporciona una interfaz interactiva para la visualización de dashboards y consultas.
+- **PostgreSQL + PostGIS:** Almacena la información financiera y geoespacial, permitiendo realizar consultas espaciales.
+
+##  Ejecución del proyecto
+
+1. Descargar o clonar el repositorio.
+2. Ubicarse en la carpeta del proyecto.
+3. Ejecutar el siguiente comando:
+
+```
+docker compose up 
+```
+
+4. Una vez iniciados los servicios, acceder a las siguientes direcciones desde el navegador:
+
+- **Mage AI:** http://localhost:6789
+- **FastAPI (Documentación Swagger):** http://localhost:8000/docs
+- **Streamlit:** http://localhost:8501
+
+## Autores
+
+Proyecto elaborado por:
+
+- **Georgett Vásquez**
+- **Tómas Jaramillo**
